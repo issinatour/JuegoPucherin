@@ -12,18 +12,21 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import issam.daniel.es.juegopucherin.Codigo.Utilities;
 import issam.daniel.es.juegopucherin.Objetos_Circulos.Circulo;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    LinearLayout linear2;
-    ImageView imagencirculo2;
-    View view;
+    int fichastotales=50;
 
     // DADOS
     TextView resultadoDados;
     Button botondado;
+    TextView textViewdado1;
+    TextView textViewdado2;
+    ImageView dado1imagen;
+    ImageView dado2imagen;
     ////
     // Jugador
     TextView textonombrejugador;
@@ -32,6 +35,9 @@ public class MainActivity extends ActionBarActivity {
     TextView fichasdelpuchero;
     // FICHAS RESTANTES
     TextView fichasRestantes;
+
+    //CIRCULOS
+    Utilities utilidades;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +49,20 @@ public class MainActivity extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        utilidades = new Utilities();
+
         // DADOS
         resultadoDados = (TextView) findViewById(R.id.textViewdadoresultado);
-        botondado = (Button) findViewById(R.id.buttondatdos);
+        botondado = (Button)  findViewById(R.id.buttondatdos);
+        textViewdado1 = (TextView) findViewById(R.id.textViewdado1);
+        textViewdado2 = (TextView) findViewById(R.id.textViewdado2);
+
+        dado1imagen = (ImageView) findViewById(R.id.imageViewDADO1);
+        dado2imagen = (ImageView) findViewById(R.id.imageViewDADO2);
+
+        dado1imagen.setImageResource(R.drawable.dado2);
+        dado2imagen.setImageResource(R.drawable.dado4);
+
         // JUGADOR
         textonombrejugador = (TextView) findViewById(R.id.textViewNombreJugador);
         //PUCHERO
@@ -86,6 +103,59 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void lanzarEldado(View view){
+        int dado1=utilidades.lanzarDados();
+        int dado2=utilidades.lanzarDados();
+
+        textViewdado1.setText(dado1+"");
+        textViewdado2.setText(dado2+"");
+
+        fichastotales--;
+        fichasRestantes.setText(fichastotales+"");
+
+        int resultadototal = dado1+dado2;
+        acciondado(resultadototal);
+        utilidades.drawdado(dado1,dado2,dado1imagen,dado2imagen);
+        resultadoDados.setText(resultadototal+"");
+    }
+
+    public void acciondado(int numero){
+        switch(numero){
+            case 2:
+                //  circulo2.sumarficha();
+
+                break;
+            case 3:
+
+                break;
+            case 4:
+
+                break;
+            case 5:
+
+                break;
+            case 6:
+
+                break;
+            case 7:
+
+                break;
+            case 8:
+
+                break;
+            case 9:
+
+                break;
+            case 10:
+
+                break;
+            case 11:
+
+                break;
+
+        }
     }
 
 

@@ -51,7 +51,7 @@
                         android:layout_width="fill_parent"
                         android:layout_weight="30"
                         android:layout_height="0sp"
-                        android:layout_gravity="center_vertical"></LinearLayout>
+                        android:layout_gravity="center_vertical"/>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -70,7 +70,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_weight="30"
-                        android:layout_height="0sp"></LinearLayout>
+                        android:layout_height="0sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -98,7 +98,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="20"></LinearLayout>
+                        android:layout_weight="20"/>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -187,7 +187,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="20"></LinearLayout>
+                        android:layout_weight="20"/>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -229,7 +229,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="20"></LinearLayout>
+                        android:layout_weight="20"/>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -265,18 +265,75 @@
                 android:id="@+id/paneldados">
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="0sp"
                     android:layout_weight="25"
+                    android:weightSum="100"
                     android:layout_height="fill_parent"
-                    android:id="@+id/dado1"></LinearLayout>
+                    android:id="@+id/dado1">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="75"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0sp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/imageViewDADO1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="25"
+                        android:layout_height="0sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X"
+                            android:id="@+id/textViewdado1"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="0sp"
                     android:layout_weight="25"
                     android:layout_height="fill_parent"
-                    android:id="@+id/dado2"></LinearLayout>
+                    android:weightSum="100"
+                    android:id="@+id/dado2">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="75"
+                        android:layout_height="0sp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageViewDADO2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="25"
+                        android:layout_height="0sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X"
+                            android:id="@+id/textViewdado2"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -305,7 +362,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Go!"
-                        android:id="@+id/buttondatdos" />
+                        android:id="@+id/buttondatdos"
+                        android:onClick="lanzarEldado" />
                 </LinearLayout>
 
             </LinearLayout>
