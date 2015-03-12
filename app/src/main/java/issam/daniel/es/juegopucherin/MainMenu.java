@@ -1,14 +1,20 @@
 package issam.daniel.es.juegopucherin;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 
 
 public class MainMenu extends ActionBarActivity {
+
+    Button jugador2, jugador3, jugador4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,33 @@ public class MainMenu extends ActionBarActivity {
         // Hide the action bar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        jugador2 = (Button) findViewById(R.id.btn2player);
+        jugador2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent SiguienteActivity = new Intent(v.getContext(), MainActivity.class);
+                startActivity(SiguienteActivity);
+            }
+        });
+
+        jugador3 = (Button) findViewById(R.id.btn3player);
+        jugador3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent SiguienteActivity = new Intent(v.getContext(), MainActivity.class);
+                startActivity(SiguienteActivity);
+            }
+        });
+
+        jugador4 = (Button) findViewById(R.id.btn4player);
+        jugador4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent SiguienteActivity = new Intent(v.getContext(), MainActivity.class);
+                startActivity(SiguienteActivity);
+            }
+        });
     }
 
 
