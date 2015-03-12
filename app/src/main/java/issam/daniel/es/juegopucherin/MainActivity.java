@@ -1,19 +1,18 @@
 package issam.daniel.es.juegopucherin;
 
-import android.graphics.drawable.Drawable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import issam.daniel.es.juegopucherin.Objetos_Circulos.Circulo2;
+import issam.daniel.es.juegopucherin.Objetos_Circulos.Circulo;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -38,18 +37,32 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Hide status bar
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // Hide the action bar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         // DADOS
         resultadoDados = (TextView) findViewById(R.id.textViewdadoresultado);
-        botondado = (Button)  findViewById(R.id.buttondatdos);
+        botondado = (Button) findViewById(R.id.buttondatdos);
         // JUGADOR
-        textonombrejugador = (TextView) findViewById(R.id.textViewNombreJugador );
+        textonombrejugador = (TextView) findViewById(R.id.textViewNombreJugador);
         //PUCHERO
         fichasdelpuchero = (TextView) findViewById(R.id.textViewFichasdelPuchero);
         // FICHAS RESTANTES
         fichasRestantes = (TextView) findViewById(R.id.textViewFichasRestantes);
 
-      new Circulo2(2,this);
+        new Circulo(this,R.id.circulo2,R.id.imagencirculo2,R.drawable.pucherito2vacio);
+        new Circulo(this,R.id.circulo3,R.id.imagencirculo3,R.drawable.pucherito3vacio);
+        new Circulo(this,R.id.circulo4,R.id.imagencirculo4,R.drawable.pucherito4vacio);
+        new Circulo(this,R.id.circulo5,R.id.imagencirculo5,R.drawable.pucherito5vacio);
+        new Circulo(this,R.id.circulo6,R.id.imagencirculo6,R.drawable.pucherito6vacio);
+        new Circulo(this,R.id.circulo7,R.id.imagencirculo7,R.drawable.pucherito7vacio);
+        new Circulo(this,R.id.circulo8,R.id.imagencirculo8,R.drawable.pucherito8vacio);
+        new Circulo(this,R.id.circulo9,R.id.imagencirculo9,R.drawable.pucherito9vacio);
+        new Circulo(this,R.id.circulo10,R.id.imagencirculo10,R.drawable.pucherito10vacio);
+        new Circulo(this,R.id.circulo11,R.id.imagencirculo11,R.drawable.pucherito11vacio);
     }
 
 
@@ -74,4 +87,6 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
