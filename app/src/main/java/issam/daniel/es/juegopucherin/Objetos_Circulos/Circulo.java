@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
+import issam.daniel.es.juegopucherin.Codigo.Utilities;
 import issam.daniel.es.juegopucherin.Jugador;
 import issam.daniel.es.juegopucherin.R;
 
@@ -18,7 +19,7 @@ public class Circulo {
     int posicion=0;
     LinearLayout linear2;
     ImageView imagenposicioncirculo2;
-
+    Utilities utilidades;
     public int getMaxposiciones() {
         return maxposiciones;
     }
@@ -29,20 +30,24 @@ public class Circulo {
 
     int maxposiciones;
     Activity activity;
-
+    int imageView;
 
 
     public Circulo(Activity activity, int layout, int imageView, int imagen,int maxposiciones){
         this.activity=activity;
         this.maxposiciones=maxposiciones;
+        this.activity=activity;
+        this.imageView=imageView;
+        utilidades=new Utilities();
         inizializar(layout,imageView);
         cargarFondo(imagen);
-        actualizarImagenPorposicion(0,0);
+        utilidades.actualizarImagenPorposicion(activity,imageView,0,0);
     }
 
     private void inizializar(int layout, int imageView){
         linear2 = (LinearLayout) activity.findViewById(layout);
         imagenposicioncirculo2 = (ImageView) activity.findViewById(imageView);
+
     }
     private void cargarFondo(int imagen){
         linear2.setBackgroundResource(imagen);
@@ -65,8 +70,7 @@ public class Circulo {
           repartir=true;
           posicion = 0;
       }
-        Log.i("posicion",posicion+"");
-        actualizarImagenPorposicion(dados, posicion);
+        utilidades.actualizarImagenPorposicion(activity,imageView,dados, posicion);
 
         return  repartir;
     }
@@ -79,261 +83,5 @@ public class Circulo {
         this.imagenposicioncirculo2 = imagenposicioncirculo2;
     }
 
-    public void actualizarImagenPorposicion(int dados,int posicion) {
 
-        if (posicion != 0) {
-            switch (dados) {
-                case 0:
-                    imagenposicioncirculo2.setImageResource(0);
-                    break;
-
-                case 2:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito2ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito2ficha2);
-                            break;
-                    }
-                    break;
-                case 3:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito3ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito3ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito3ficha3);
-                            break;
-                    }
-                    break;
-                case 4:
-                    switch (posicion) {
-                        case 0:
-
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito4ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito4ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito4ficha3);
-                            break;
-                        case 4:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito4ficha4);
-                            break;
-                    }
-                    break;
-                case 5:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito5ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito5ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito5ficha3);
-                            break;
-                        case 4:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito5ficha4);
-                            break;
-                        case 5:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito5ficha5);
-                            break;
-                    }
-                    break;
-                case 6:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito6ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito6ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito6ficha3);
-                            break;
-                        case 4:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito6ficha4);
-                            break;
-                        case 5:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito6ficha5);
-                            break;
-                        case 6:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito6ficha6);
-                            break;
-                    }
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha3);
-                            break;
-                        case 4:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha4);
-                            break;
-                        case 5:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha5);
-                            break;
-                        case 6:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha6);
-                            break;
-                        case 7:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha7);
-                            break;
-                        case 8:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8ficha8);
-                            break;
-                    }
-                    break;
-                case 9:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha3);
-                            break;
-                        case 4:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha4);
-                            break;
-                        case 5:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha5);
-                            break;
-                        case 6:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha6);
-                            break;
-                        case 7:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha7);
-                            break;
-                        case 8:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha8);
-                            break;
-                        case 9:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9ficha9);
-                            break;
-                    }
-                    break;
-                case 10:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha3);
-                            break;
-                        case 4:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha4);
-                            break;
-                        case 5:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha5);
-                            break;
-                        case 6:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha6);
-                            break;
-                        case 7:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha7);
-                            break;
-                        case 8:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha8);
-                            break;
-                        case 9:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha9);
-                            break;
-                        case 10:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10ficha10);
-                            break;
-                    }
-                    break;
-                case 11:
-                    switch (posicion) {
-                        case 0:
-                            break;
-                        case 1:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha1);
-                            break;
-                        case 2:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha2);
-                            break;
-                        case 3:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha3);
-                            break;
-                        case 4:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha4);
-                            break;
-                        case 5:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha5);
-                            break;
-                        case 6:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha6);
-                            break;
-                        case 7:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha7);
-                            break;
-                        case 8:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha8);
-                            break;
-                        case 9:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha9);
-                            break;
-                        case 10:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha10);
-                            break;
-                        case 11:
-                            imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11ficha11);
-                            break;
-                    }
-                    break;
-                case 12:
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito2vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito3vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito4vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito5vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito6vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito8vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito9vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito10vacio);
-                    imagenposicioncirculo2.setBackgroundResource(R.drawable.pucherito11vacio);
-                    break;
-            }
-
-
-        } else {
-            imagenposicioncirculo2.setBackgroundResource(0);
-        }
-    }
 }

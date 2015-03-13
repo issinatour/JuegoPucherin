@@ -28,7 +28,8 @@
                 android:layout_weight="15"
                 android:layout_width="0sp"
                 android:layout_height="fill_parent"
-                android:id="@+id/jugadores" >
+                android:id="@+id/jugadores"
+                android:layout_marginBottom="9dp">
 
                 <ListView
                     android:layout_width="wrap_content"
@@ -177,12 +178,14 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
                         android:layout_weight="35"
-                        android:id="@+id/circulo3">
+                        android:id="@+id/circulo3"
+                        android:layout_marginBottom="15dp">
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/imagencirculo3" />
+                            android:id="@+id/imagencirculo3"
+                            android:layout_marginBottom="15dp" />
                     </LinearLayout>
                 </LinearLayout>
 

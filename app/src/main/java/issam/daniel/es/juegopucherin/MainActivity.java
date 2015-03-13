@@ -95,16 +95,8 @@ public class MainActivity extends ActionBarActivity {
         fichastotales7.setText(0+"");
 
         fichasRestantes.setText(fichastotales+"");
-        circulo2=  new Circulo(this,R.id.circulo2,R.id.imagencirculo2,R.drawable.pucherito2vacio,2);
-        circulo3= new Circulo(this,R.id.circulo3,R.id.imagencirculo3,R.drawable.pucherito3vacio,3);
-        circulo4= new Circulo(this,R.id.circulo4,R.id.imagencirculo4,R.drawable.pucherito4vacio,4);
-        circulo5= new Circulo(this,R.id.circulo5,R.id.imagencirculo5,R.drawable.pucherito5vacio,5);
-        circulo6= new Circulo(this,R.id.circulo6,R.id.imagencirculo6,R.drawable.pucherito6vacio,6);
-        circulo7=  new Circulo(this,R.id.circulo7,R.id.imagencirculo7,R.drawable.pucherito7vacio,500);
-        circulo8=  new Circulo(this,R.id.circulo8,R.id.imagencirculo8,R.drawable.pucherito8vacio,8);
-        circulo9= new Circulo(this,R.id.circulo9,R.id.imagencirculo9,R.drawable.pucherito9vacio,9);
-        circulo10= new Circulo(this,R.id.circulo10,R.id.imagencirculo10,R.drawable.pucherito10vacio,10);
-        circulo11= new Circulo(this,R.id.circulo11,R.id.imagencirculo11,R.drawable.pucherito11vacio,11);
+
+        crearcirculos();
 
         listaJugadores = new ArrayList<Jugador>();
         Jugador jugador1 = new Jugador(1,"PACO",0);
@@ -135,6 +127,8 @@ public class MainActivity extends ActionBarActivity {
         VistaDePuntuaciones.setAdapter(adaptador);
 
     }
+
+
 
 
     @Override
@@ -240,4 +234,22 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+
+    private void crearcirculos(){
+        circulo2=  new Circulo(this,R.id.circulo2,R.id.imagencirculo2,R.drawable.pucherito2vacio,2);
+        circulo3= new Circulo(this,R.id.circulo3,R.id.imagencirculo3,R.drawable.pucherito3vacio,3);
+        circulo4= new Circulo(this,R.id.circulo4,R.id.imagencirculo4,R.drawable.pucherito4vacio,4);
+        circulo5= new Circulo(this,R.id.circulo5,R.id.imagencirculo5,R.drawable.pucherito5vacio,5);
+        circulo6= new Circulo(this,R.id.circulo6,R.id.imagencirculo6,R.drawable.pucherito6vacio,6);
+        circulo7=  new Circulo(this,R.id.circulo7,R.id.imagencirculo7,R.drawable.pucherito7vacio,500);
+        circulo8=  new Circulo(this,R.id.circulo8,R.id.imagencirculo8,R.drawable.pucherito8vacio,8);
+        circulo9= new Circulo(this,R.id.circulo9,R.id.imagencirculo9,R.drawable.pucherito9vacio,9);
+        circulo10= new Circulo(this,R.id.circulo10,R.id.imagencirculo10,R.drawable.pucherito10vacio,10);
+        circulo11= new Circulo(this,R.id.circulo11,R.id.imagencirculo11,R.drawable.pucherito11vacio,11);
+    }
+
+
+    public void moverficha(){
+
+    }
 }
