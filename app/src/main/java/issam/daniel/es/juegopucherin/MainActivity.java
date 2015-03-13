@@ -1,6 +1,7 @@
 package issam.daniel.es.juegopucherin;
 
 import android.graphics.drawable.Drawable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 
@@ -39,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
     int numerodejugadores=0;
     ////
     //PUCHERO
-    TextView fichasdelpuchero;
+
     // FICHAS RESTANTES
     TextView fichasRestantes;
 
@@ -88,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
         // JUGADOR
         textonombrejugador = (TextView) findViewById(R.id.textViewNombreJugador );
         //PUCHERO
-        fichasdelpuchero = (TextView) findViewById(R.id.textViewFichasdelPuchero);
+
         // FICHAS RESTANTES
         fichasRestantes = (TextView) findViewById(R.id.textViewFichasRestantes);
         //FICHAS DEL 7

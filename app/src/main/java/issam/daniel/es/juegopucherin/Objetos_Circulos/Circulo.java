@@ -46,8 +46,8 @@ public class Circulo {
 
     private void inizializar(int layout, int imageView){
         linear2 = (LinearLayout) activity.findViewById(layout);
-        imagenposicioncirculo2 = (ImageView) activity.findViewById(imageView);
-    
+        imagenposicioncirculo2 = (ImageView) activity.findViewById(imageView);}
+
     private void cargarFondo(int imagen){
         linear2.setBackgroundResource(imagen);
     }
