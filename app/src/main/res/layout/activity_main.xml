@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:paddingTop="5dp"
+    android:paddingBottom="0dp" tools:context=".MainActivity"
     android:background="@drawable/fondo">
 
     <LinearLayout
@@ -28,7 +28,15 @@
                 android:layout_weight="15"
                 android:layout_width="0sp"
                 android:layout_height="fill_parent"
-                android:id="@+id/jugadores" />
+                android:id="@+id/jugadores" >
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listViewJugadores"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -41,7 +49,7 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0sp"
-                    android:layout_weight="18"
+                    android:layout_weight="20"
                     android:weightSum="100"
                     android:layout_height="fill_parent"
                     android:id="@+id/fila1">
@@ -58,7 +66,13 @@
                         android:layout_width="fill_parent"
                         android:layout_weight="40"
                         android:layout_height="0sp"
-                        android:id="@+id/circulo5"></LinearLayout>
+                        android:id="@+id/circulo5">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo5" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -70,7 +84,7 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0sp"
-                    android:layout_weight="18"
+                    android:layout_weight="20"
                     android:weightSum="100"
                     android:layout_height="fill_parent"
                     android:id="@+id/fila2">
@@ -80,7 +94,13 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
                         android:layout_weight="40"
-                        android:id="@+id/circulo6"></LinearLayout>
+                        android:id="@+id/circulo6">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo6" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -93,13 +113,19 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
                         android:layout_weight="40"
-                        android:id="@+id/circulo4"></LinearLayout>
+                        android:id="@+id/circulo4">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo4" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0sp"
-                    android:layout_weight="28"
+                    android:layout_weight="20"
                     android:weightSum="100"
                     android:layout_height="fill_parent"
                     android:id="@+id/fila3">
@@ -108,28 +134,62 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="30"
-                        android:id="@+id/circulo8"></LinearLayout>
+                        android:layout_weight="33"
+                        android:id="@+id/circulo8">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo8" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="40"
-                        android:id="@+id/circulo7"></LinearLayout>
+                        android:layout_weight="35"
+                        android:id="@+id/circulo7">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="X"
+                                android:id="@+id/textView7FichasTotales"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo7" />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="30"
-                        android:id="@+id/circulo3"></LinearLayout>
+                        android:layout_weight="35"
+                        android:id="@+id/circulo3">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo3" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0sp"
-                    android:layout_weight="18"
+                    android:layout_weight="20"
                     android:weightSum="100"
                     android:layout_height="fill_parent"
                     android:id="@+id/fila4">
@@ -139,7 +199,13 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
                         android:layout_weight="40"
-                        android:id="@+id/circulo9"></LinearLayout>
+                        android:id="@+id/circulo9">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo9" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -164,7 +230,7 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0sp"
-                    android:layout_weight="18"
+                    android:layout_weight="20"
                     android:weightSum="100"
                     android:layout_height="fill_parent"
                     android:id="@+id/fila5">
@@ -175,7 +241,13 @@
                         android:layout_height="0sp"
                         android:layout_weight="40"
                         android:id="@+id/circulo10"
-                        android:layout_marginTop="10dp"></LinearLayout>
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo10" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -189,7 +261,13 @@
                         android:layout_height="0sp"
                         android:layout_weight="40"
                         android:id="@+id/circulo11"
-                        android:layout_marginBottom="10dp"></LinearLayout>
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imagencirculo11" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -211,18 +289,75 @@
                 android:id="@+id/paneldados">
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="0sp"
                     android:layout_weight="25"
+                    android:weightSum="100"
                     android:layout_height="fill_parent"
-                    android:id="@+id/dado1"></LinearLayout>
+                    android:id="@+id/dado1">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="75"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0sp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/imageViewDADO1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="25"
+                        android:layout_height="0sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X"
+                            android:id="@+id/textViewdado1"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="0sp"
                     android:layout_weight="25"
                     android:layout_height="fill_parent"
-                    android:id="@+id/dado2"></LinearLayout>
+                    android:weightSum="100"
+                    android:id="@+id/dado2">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="75"
+                        android:layout_height="0sp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageViewDADO2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="25"
+                        android:layout_height="0sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X"
+                            android:id="@+id/textViewdado2"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -251,7 +386,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Go!"
-                        android:id="@+id/buttondatdos" />
+                        android:id="@+id/buttondatdos"
+                        android:onClick="lanzarEldado" />
                 </LinearLayout>
 
             </LinearLayout>
