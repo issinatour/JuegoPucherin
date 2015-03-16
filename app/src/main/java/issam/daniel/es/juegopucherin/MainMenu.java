@@ -14,6 +14,7 @@ import android.widget.Button;
 public class MainMenu extends ActionBarActivity {
 
     Button jugador2, jugador3, jugador4;
+    int players = 0;
 
 
     @Override
@@ -31,8 +32,11 @@ public class MainMenu extends ActionBarActivity {
         jugador2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent SiguienteActivity = new Intent(v.getContext(), MainActivity.class);
+                players =2;
+                Intent SiguienteActivity = new Intent(v.getContext(), SelectNames.class);
+                SiguienteActivity.putExtra("NumJugadores",players);
                 startActivity(SiguienteActivity);
+
             }
         });
 
@@ -40,8 +44,11 @@ public class MainMenu extends ActionBarActivity {
         jugador3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent SiguienteActivity = new Intent(v.getContext(), MainActivity.class);
+                players=3;
+                Intent SiguienteActivity = new Intent(v.getContext(), SelectNames.class);
+                SiguienteActivity.putExtra("NumJugadores",players);
                 startActivity(SiguienteActivity);
+
             }
         });
 
@@ -49,8 +56,11 @@ public class MainMenu extends ActionBarActivity {
         jugador4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent SiguienteActivity = new Intent(v.getContext(), MainActivity.class);
+                players=4;
+                Intent SiguienteActivity = new Intent(v.getContext(), SelectNames.class);
+                SiguienteActivity.putExtra("NumJugadores",players);
                 startActivity(SiguienteActivity);
+
             }
         });
     }

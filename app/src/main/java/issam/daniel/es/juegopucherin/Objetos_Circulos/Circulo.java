@@ -33,6 +33,7 @@ public class Circulo {
     int imageView;
 
 
+
     public Circulo(Activity activity, int layout, int imageView, int imagen,int maxposiciones){
         this.activity=activity;
         this.maxposiciones=maxposiciones;
@@ -65,13 +66,27 @@ public class Circulo {
         boolean repartir=false;
         posicion++;
       if(posicion>maxposiciones) {
-          listajugadores.get(jugadoractual).añadirpuntos(maxposiciones);
+          listajugadores.get(jugadoractual).añadirpuntos(posicion-1);
           repartir=true;
           posicion = 0;
       }
         utilidades.actualizarImagenPorposicion(activity,imageView,dados, posicion);
 
         return  repartir;
+    }
+
+    public boolean recogerFichas(int dados,ArrayList<Jugador> listajugadores,int jugadoractual){
+        boolean repartir=false;
+
+        if(posicion>0){
+            listajugadores.get(jugadoractual).añadirpuntos(posicion);
+            repartir=true;
+            posicion = 0;
+
+            utilidades.actualizarImagenPorposicion(activity,imageView,dados, posicion);
+        }
+
+        return repartir;
     }
 
     public ImageView getImagenposicioncirculo2() {

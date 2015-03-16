@@ -156,7 +156,8 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0dp"
                         android:layout_weight="25"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:id="@+id/layoutPlayer3">
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -198,7 +199,8 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0dp"
                         android:layout_weight="25"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:id="@+id/layoutPlayer4">
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -268,7 +270,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="JUGAR"
-                        android:id="@+id/button"
+                        android:id="@+id/buttonPlay"
                         android:background="@drawable/backgroundbutton"
                         android:textColor="#00a98c"
                         android:textSize="15sp" />
