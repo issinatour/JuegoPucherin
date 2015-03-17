@@ -24,7 +24,8 @@
         </activity>
         <activity
             android:name=".SelectNames"
-            android:label="@string/title_activity_select_names" >
+            android:label="@string/title_activity_select_names"
+            android:screenOrientation="landscape">
         </activity>
     </application>
 

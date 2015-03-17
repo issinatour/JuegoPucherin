@@ -1,5 +1,7 @@
 package issam.daniel.es.juegopucherin;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBar;
@@ -24,15 +26,14 @@ import issam.daniel.es.juegopucherin.Objetos_Circulos.Circulo;
 
 
 public class MainActivity extends ActionBarActivity {
+    AlertDialog.Builder dialog;
+    Intent SiguienteActivity;
 
     int fichastotales = 50;
     //JUGADORES
     ArrayList<Jugador> listaJugadores;
     // DADOS
-    TextView resultadoDados;
     Button botondado;
-    TextView textViewdado1;
-    TextView textViewdado2;
     ImageView dado1imagen;
     ImageView dado2imagen;
     ////
@@ -79,10 +80,7 @@ public class MainActivity extends ActionBarActivity {
 
 
         // DADOS
-        resultadoDados = (TextView) findViewById(R.id.textViewdadoresultado);
         botondado = (Button) findViewById(R.id.buttondatdos);
-        textViewdado1 = (TextView) findViewById(R.id.textViewdado1);
-        textViewdado2 = (TextView) findViewById(R.id.textViewdado2);
 
         dado1imagen = (ImageView) findViewById(R.id.imageViewDADO1);
         dado2imagen = (ImageView) findViewById(R.id.imageViewDADO2);
@@ -140,6 +138,9 @@ public class MainActivity extends ActionBarActivity {
 
         textonombrejugador.setText(listaJugadores.get(jugadoractual).getNombre());
 
+
+
+
     }
 
     private void inizializarListView(ArrayList<Jugador> listaJugadores) {
@@ -182,8 +183,6 @@ public class MainActivity extends ActionBarActivity {
         int dado1 = utilidades.lanzarDados();
         int dado2 = utilidades.lanzarDados();
 
-        textViewdado1.setText(dado1 + "");
-        textViewdado2.setText(dado2 + "");
 
         if (fichastotales > 0) {
             fichastotales--;
@@ -194,7 +193,6 @@ public class MainActivity extends ActionBarActivity {
         actualizarPosiciones(resultadototal);
 
         utilidades.drawdado(dado1, dado2, dado1imagen, dado2imagen);
-        resultadoDados.setText(resultadototal + "");
 
 
         if (jugadoractual == numerodejugadores) {
@@ -208,8 +206,25 @@ public class MainActivity extends ActionBarActivity {
 
         if(comprobarGanador()){
             Log.i("GANADOR","Felicidades a ganado :"+ganador().getNombre());
-            Intent SiguienteActivity = new Intent(view.getContext(), MainMenu.class);
-            startActivity(SiguienteActivity);
+            SiguienteActivity = new Intent(view.getContext(), MainMenu.class);
+
+            dialog = new AlertDialog.Builder(this);
+
+            dialog.setMessage("¡¡Felicidades "+ganador().getNombre()+" has ganado la partida con "+ganador().getPuntuacion()+" puntos!!");
+            dialog.setCancelable(false);
+            dialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    startActivity(SiguienteActivity);
+
+                    MainActivity.this.finish();
+
+                }
+            });
+            dialog.show();
+
         }
     }
 

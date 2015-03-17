@@ -3,7 +3,7 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="5dp"
-    android:paddingBottom="0dp" tools:context=".MainActivity"
+    android:paddingBottom="5dp" tools:context=".MainActivity"
     android:background="@drawable/fondo">
 
     <LinearLayout
@@ -58,14 +58,14 @@
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
-                        android:layout_weight="30"
+                        android:layout_weight="32.5"
                         android:layout_height="0sp"
                         android:layout_gravity="center_vertical"/>
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
-                        android:layout_weight="40"
+                        android:layout_weight="35"
                         android:layout_height="0sp"
                         android:id="@+id/circulo5">
 
@@ -78,7 +78,7 @@
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
-                        android:layout_weight="30"
+                        android:layout_weight="32.5"
                         android:layout_height="0sp"/>
                 </LinearLayout>
 
@@ -94,7 +94,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="40"
+                        android:layout_weight="35"
                         android:id="@+id/circulo6">
 
                         <ImageView
@@ -107,13 +107,13 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="20"/>
+                        android:layout_weight="30"/>
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="40"
+                        android:layout_weight="35"
                         android:id="@+id/circulo4">
 
                         <ImageView
@@ -148,7 +148,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="35"
+                        android:layout_weight="33"
                         android:id="@+id/circulo7">
 
                         <ImageView
@@ -161,7 +161,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="35"
+                        android:layout_weight="33"
                         android:id="@+id/circulo3">
 
                         <ImageView
@@ -183,7 +183,7 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="40"
+                        android:layout_weight="35"
                         android:id="@+id/circulo9">
 
                         <ImageView
@@ -196,13 +196,13 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="20"/>
+                        android:layout_weight="30"/>
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="40"
+                        android:layout_weight="35"
                         android:id="@+id/circulo2">
 
                         <ImageView
@@ -224,9 +224,8 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="40"
-                        android:id="@+id/circulo10"
-                        android:layout_marginTop="10dp">
+                        android:layout_weight="35"
+                        android:id="@+id/circulo10">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -238,15 +237,14 @@
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="20"/>
+                        android:layout_weight="30"/>
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp"
-                        android:layout_weight="40"
-                        android:id="@+id/circulo11"
-                        android:layout_marginBottom="10dp">
+                        android:layout_weight="35"
+                        android:id="@+id/circulo11">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -276,14 +274,14 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0sp"
-                    android:layout_weight="25"
+                    android:layout_weight="30"
                     android:weightSum="100"
                     android:layout_height="fill_parent"
                     android:id="@+id/dado1">
 
                     <LinearLayout
                         android:orientation="vertical"
-                        android:layout_weight="75"
+                        android:layout_weight="100"
                         android:layout_width="fill_parent"
                         android:layout_height="0sp">
 
@@ -294,25 +292,12 @@
                             android:id="@+id/imageViewDADO1" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="fill_parent"
-                        android:layout_weight="25"
-                        android:layout_height="0sp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="X"
-                            android:id="@+id/textViewdado1"
-                            android:textColor="#ffffff" />
-                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0sp"
-                    android:layout_weight="25"
+                    android:layout_weight="30"
                     android:layout_height="fill_parent"
                     android:weightSum="100"
                     android:id="@+id/dado2">
@@ -320,7 +305,7 @@
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="fill_parent"
-                        android:layout_weight="75"
+                        android:layout_weight="100"
                         android:layout_height="0sp">
 
                         <ImageView
@@ -329,35 +314,6 @@
                             android:id="@+id/imageViewDADO2" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="fill_parent"
-                        android:layout_weight="25"
-                        android:layout_height="0sp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="X"
-                            android:id="@+id/textViewdado2"
-                            android:textColor="#ffffff" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="0sp"
-                    android:layout_weight="10"
-                    android:layout_height="fill_parent"
-                    android:id="@+id/paneldadoresultado">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="X"
-                        android:id="@+id/textViewdadoresultado"
-                        android:textColor="#FFFFFF"
-                        android:layout_gravity="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -372,7 +328,9 @@
                         android:layout_height="wrap_content"
                         android:text="Go!"
                         android:id="@+id/buttondatdos"
-                        android:onClick="lanzarEldado" />
+                        android:onClick="lanzarEldado"
+                        android:background="@drawable/backgroundbutton"
+                        android:textColor="#00a98c" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -383,7 +341,8 @@
                 android:weightSum="100"
                 android:layout_height="fill_parent"
                 android:id="@+id/paneljugador"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:layout_marginLeft="4dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
